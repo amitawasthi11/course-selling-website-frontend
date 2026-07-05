@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const token = localStorage.getItem("token");
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location.reload();
+  };
+
   return (
     <nav className="bg-slate-900 text-white shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
@@ -23,26 +30,39 @@ function Navbar() {
             Courses
           </Link>
 
-          <Link to="/purchases" className="hover:text-blue-400">
-            My Purchases
-          </Link>
+          {token && (
+            <Link to="/purchases" className="hover:text-blue-400">
+              My Purchases
+            </Link>
+          )}
         </div>
 
         {/* Auth Buttons */}
         <div className="flex gap-4">
-          <Link
-            to="/login"
-            className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700"
-          >
-            Login
-          </Link>
+          {token ? (
+            <button
+              onClick={handleLogout}
+              className="px-4 py-2 rounded bg-red-600 hover:bg-red-700"
+            >
+              Logout
+            </button>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700"
+              >
+                Login
+              </Link>
 
-          <Link
-            to="/signup"
-            className="px-4 py-2 rounded border border-blue-500 hover:bg-blue-500"
-          >
-            Signup
-          </Link>
+              <Link
+                to="/signup"
+                className="px-4 py-2 rounded border border-blue-500 hover:bg-blue-500"
+              >
+                Signup
+              </Link>
+            </>
+          )}
         </div>
 
       </div>

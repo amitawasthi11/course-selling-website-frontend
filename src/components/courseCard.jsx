@@ -1,34 +1,42 @@
 import Button from "./Button";
 
-function CourseCard() {
+function CourseCard({ course }) {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
 
       <img
-        src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500"
-        alt=""
-        className="h-48 w-full object-cover"
+        src={
+          course.image ||
+          "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600"
+        }
+        alt={course.title}
+        className="h-52 w-full object-cover"
       />
 
       <div className="p-5">
 
-        <h2 className="text-xl font-bold">
-          React Masterclass
+        <h2 className="text-2xl font-bold">
+          {course.title}
         </h2>
 
-        <p className="text-gray-500 mt-2">
-          Become a professional React Developer.
+        <p className="text-gray-500 mt-3">
+          {course.description}
         </p>
 
-        <h3 className="mt-4 text-blue-600 text-2xl font-bold">
-          ₹999
-        </h3>
+        <div className="flex justify-between items-center mt-5">
 
-        <Button className="w-full mt-5">
-          Buy Course
-        </Button>
+          <h3 className="text-blue-600 text-2xl font-bold">
+            ₹{course.price}
+          </h3>
+
+          <Button>
+            Buy Course
+          </Button>
+
+        </div>
 
       </div>
+
     </div>
   );
 }
