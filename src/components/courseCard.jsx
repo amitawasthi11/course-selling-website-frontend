@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-function CourseCard({ course }) {
+function CourseCard({ course,handlePurchase }) {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
 
@@ -29,10 +29,12 @@ function CourseCard({ course }) {
             ₹{course.price}
           </h3>
 
-          <Button>
-            Buy Course
-          </Button>
-
+         <button
+  onClick={() => handlePurchase(course._id)}
+  className="bg-blue-600 text-white px-4 py-2 rounded"
+>
+  Buy Course
+</button>
         </div>
 
       </div>
