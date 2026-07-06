@@ -1,16 +1,15 @@
-import Button from "./Button";
+// import Button from "./Button";
 
-function CourseCard({ course,handlePurchase }) {
+function CourseCard({ course,handlePurchase,isPurchased,}) {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-
+    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
       <img
         src={
           course.image ||
           "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600"
         }
         alt={course.title}
-        className="h-52 w-full object-cover"
+        className="h-56 w-full object-cover"
       />
 
       <div className="p-5">
@@ -29,12 +28,21 @@ function CourseCard({ course,handlePurchase }) {
             ₹{course.price}
           </h3>
 
-         <button
-  onClick={() => handlePurchase(course._id)}
-  className="bg-blue-600 text-white px-4 py-2 rounded"
->
-  Buy Course
-</button>
+        {isPurchased ? (
+  <button
+    className="bg-green-600 text-white px-4 py-2 rounded-lg cursor-default"
+    disabled
+  >
+    ✓ Purchased
+  </button>
+) : (
+  <button
+    onClick={() => handlePurchase(course._id)}
+    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition"
+  >
+    Buy Course
+  </button>
+)}
         </div>
 
       </div>

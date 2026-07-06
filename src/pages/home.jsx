@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-
+import Stats from "../components/Stats";
 import api from "../api/axios";
-
+import Testimonials from "../components/Testimonials";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import CourseCard from "../components/CourseCard";
 import SectionTitle from "../components/SectionTitle";
+import FAQ from "../components/FAQ";
+
 
 function Home() {
   const navigate = useNavigate();
@@ -63,7 +65,7 @@ setCourses(res.data);
   return (
     <>
       <Hero />
-
+     <Stats />
       <section className="max-w-7xl mx-auto py-20 px-6">
         <SectionTitle
           title="Featured Courses"
@@ -75,7 +77,7 @@ setCourses(res.data);
             Loading...
           </h2>
         ) : (
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {courses.map((course) => (
               <CourseCard
                 key={course._id}
@@ -86,7 +88,8 @@ setCourses(res.data);
           </div>
         )}
       </section>
-
+    <Testimonials />
+    <FAQ />
       <Footer />
     </>
   );
