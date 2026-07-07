@@ -8,9 +8,9 @@ Built with **React, Node.js, Express, MongoDB, JWT Authentication, and Tailwind 
 
 ## 🚀 Live Demo
 
-🌐 Frontend: https://your-vercel-url.vercel.app
+🌐 Frontend: https://skillora-wvclmdvmp-amitawasthi11s-projects.vercel.app/
 
-⚙️ Backend API: https://your-render-url.onrender.com
+⚙️ Backend API: https://dashboard.render.com/web/srv-d93oespo3t8c739h79q0
 
 ---
 
