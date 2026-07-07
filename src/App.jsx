@@ -16,10 +16,10 @@ import ChooseSignup from "./pages/ChooseSignup";
 // Admin
 import AdminSignup from "./admin/AdminSignup";
 import AdminNavbar from "./admin/AdminNavbar";
-import AdminLogin from "./admin/adminLogin";
-import Dashboard from "./admin/dashboard";
-import CreateCourse from "./admin/createCourse";
-import EditCourse from "./admin/editCourse";
+import AdminLogin from "./admin/AdminLogin";
+import Dashboard from "./admin/Dashboard";
+import CreateCourse from "./admin/CreateCourse";
+import EditCourse from "./admin/EditCourse";
 import AdminProtectedRoute from "./admin/AdminProtectedRoute";
 
 function App() {
