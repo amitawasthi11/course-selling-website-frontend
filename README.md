@@ -1,16 +1,189 @@
-# React + Vite
+# 🎓 Skillora – Full Stack Course Selling Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Skillora is a full-stack MERN Course Selling Platform that allows users to explore, purchase, and manage online courses while providing administrators with a dedicated dashboard to create and manage course content.
 
-Currently, two official plugins are available:
+Built with **React, Node.js, Express, MongoDB, JWT Authentication, and Tailwind CSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🌐 Frontend: https://your-vercel-url.vercel.app
 
-## Expanding the ESLint configuration
+⚙️ Backend API: https://your-render-url.onrender.com
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# ✨ Features
+
+## 👤 User Features
+
+- Secure User Authentication (JWT)
+- User Signup & Login
+- Browse Available Courses
+- Search Courses
+- Purchase Courses
+- View Purchased Courses
+- Protected Routes
+- Responsive UI
+- Modern Landing Page
+- Testimonials Section
+- FAQ Section
+
+---
+
+## 🛡️ Admin Features
+
+- Admin Authentication
+- Admin Signup & Login
+- Secure Admin Dashboard
+- Create New Courses
+- Edit Existing Courses
+- Delete Courses
+- Dashboard Statistics
+- Protected Admin Routes
+
+---
+
+# 🛠️ Tech Stack
+
+### Frontend
+
+- React.js
+- React Router DOM
+- Tailwind CSS
+- Axios
+- React Hot Toast
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- bcrypt
+
+### Deployment
+
+- Vercel
+- Render
+
+---
+
+# 📂 Project Structure
+
+```
+Skillora
+
+├── Backend
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── config
+│   ├── server.js
+│   └── package.json
+│
+├── Frontend
+│   ├── src
+│   │   ├── admin
+│   │   ├── api
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+```
+
+---
+
+# 🔐 Authentication
+
+Skillora uses **JWT Authentication** with Role-Based Access Control.
+
+### User Authentication
+
+- User Signup
+- User Login
+- Purchase Courses
+- View Purchased Courses
+
+### Admin Authentication
+
+- Admin Signup
+- Admin Login
+- Create Courses
+- Edit Courses
+- Delete Courses
+
+
+# 📌 API Endpoints
+
+## User
+
+| Method | Endpoint |
+|---------|----------|
+| POST | `/user/signup` |
+| POST | `/user/signin` |
+| GET | `/user/courses` |
+| POST | `/user/purchase/:courseId` |
+| GET | `/user/purchases` |
+
+---
+
+## Admin
+
+| Method | Endpoint |
+|---------|----------|
+| POST | `/admin/signup` |
+| POST | `/admin/signin` |
+| GET | `/admin/courses` |
+| POST | `/admin/create-course` |
+| PUT | `/admin/courses/:id` |
+| DELETE | `/admin/courses/:id` |
+
+---
+
+# 📈 Future Improvements
+
+- 💳 Razorpay / Stripe Integration
+- ⭐ Course Ratings & Reviews
+- 📂 Course Categories
+- ❤️ Wishlist
+- 👤 User Profile
+- 📹 Video Streaming
+- 📜 Certificates
+- 📧 Email Verification
+- 🔑 Forgot Password
+
+---
+
+# 📚 What I Learned
+
+- Full Stack MERN Development
+- REST API Design
+- JWT Authentication
+- Role-Based Authorization
+- Protected Routes
+- CRUD Operations
+- MongoDB & Mongoose
+- React Hooks
+- Axios Interceptors
+- Tailwind CSS
+- Deployment with Vercel & Render
+
+---
+
+# 👨‍💻 Author
+
+**Amit Awasthi**
+
+GitHub: https://github.com/amitawasthi11
+
+LinkedIn: *(Add your LinkedIn profile here)*
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
